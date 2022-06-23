@@ -256,16 +256,16 @@ SELECT
     NULLIF('박찬호', '박지성')
 FROM dual;
 
--- COALESCE(expr1, ...)
+-- COALESCE(expr1, ...) >> 가변 인자로 여러 개 쓸 수 있다.
 -- 많은 표현식 중 Null이 아닌 값이 최초로 발견되면 해당 값을 리턴
 SELECT 
-    COALESCE(NULL, NULL, 3000, 4000)
+    COALESCE(NULL, NULL, 3000, 4000) -- null이 아닌 최초 값 3000 리턴
 FROM dual;
 
 SELECT 
-    COALESCE(NULL, 5000, NULL, 2000)
+    COALESCE(NULL, 5000, NULL, 2000) -- 5000
 FROM dual;
 
 SELECT 
-    COALESCE(7000, NULL, NULL, 8000)
+    COALESCE(7000, NULL, NULL, 8000) -- 7000
 FROM dual;

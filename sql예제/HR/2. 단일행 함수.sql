@@ -20,7 +20,7 @@ WHERE LOWER(first_name) = 'david'
 --           이 열의 별칭은 salary입니다.
 SELECT 
     RPAD(SUBSTR(first_name, 1, 3), LENGTH(first_name), '*') AS name
-    , LPAD(salary, 10, '*') AS salary
+    , LPAD(salary, 10, '*') AS salary -- 10칸을 차지해라, 빈 공간은 왼쪽에 별로 채워라.
 FROM employees
 WHERE LOWER(job_id) = 'it_prog'
 ;

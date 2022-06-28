@@ -142,7 +142,7 @@ ON A.dept_cd = B.dept_cd
 WHERE A.addr LIKE '%용인%'
     AND A.emp_nm LIKE '김%'
 ORDER BY A.emp_no
-
+;
 
 -- 1980년대생 사원들의 사번, 사원명, 부서명, 자격증명, 취득일자를 조회
 SELECT

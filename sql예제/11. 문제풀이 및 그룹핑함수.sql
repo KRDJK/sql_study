@@ -88,7 +88,7 @@ SELECT * FROM tb_emp;
 SELECT * FROM tb_emp_view;
 
 
-DELETE FROM tb_emp_view
+DELETE FROM tb_emp_view -- 원래는 여기서 삭제하면 원본에서는 삭제되면 안된다고 하나 오라클에서는 삭제가 가능하게 해주는 듯하다.
 WHERE emp_nm = '김종서'
 ;
 

@@ -27,14 +27,24 @@ COMMIT;
 
 
 -- 일정 테이블 생성
+DROP TABLE schedule;
 CREATE TABLE schedule (
     schedule_no NUMBER(10) PRIMARY KEY
-    , schedule_nm VARCHAR2(50) DEFAULT '미정' NOT NULL
+    , schedule_nm VARCHAR2(50) NOT NULL
     , start_date CHAR(8) DEFAULT TO_CHAR(SYSDATE, 'YYYYMMDD') NOT NULL
-    , end_date CHAR(8) DEFAULT '미지정' NOT NULL
-    , manager_nm VARCHAR2(10) DEFAULT '미정' NOT NULL
-    , manager_no NUMBER(10) DEFAULT '미정' NOT NULL
+    , end_date CHAR(8) NOT NULL
+    , manager_nm VARCHAR2(10) NOT NULL
+    --, manager_no NUMBER(10) DEFAULT '미정' NOT NULL
     , manager_rank VARCHAR2(10) NOT NULL
 );
 
+SELECT * FROM schedule;
+
 CREATE SEQUENCE seq_schedule;
+DROP SEQUENCE seq_schedule;
+
+INSERT INTO schedule
+VALUES 
+    (seq_schedule.nextval, '테스트 일정', '20220630', '20220701', '김동진', '사원')
+;
+COMMIT;

@@ -48,3 +48,13 @@ VALUES
     (seq_schedule.nextval, '테스트 일정', '20220630', '20220701', '김동진', '사원')
 ;
 COMMIT;
+
+
+
+
+-- 회원 정보 저장 테이블 생성
+CREATE TABLE member (
+    member_id VARCHAR2(10) PRIMARY KEY
+    , member_pw VARCHAR2(10) NOT NULL
+    , emp_no -- 외래키로 설정해야함.
+);
